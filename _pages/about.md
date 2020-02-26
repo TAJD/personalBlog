@@ -3,19 +3,9 @@ layout: page
 title: About
 ---
 
-## Ultra - Super fast Jekyll theme 
+# About
 
-Super fast, minimal one-column portfolio/blog theme built for Jekyll. Theme weighs under <strong>2kb</strong>. Perfect for your personal website, blog and portfolio.
+I am a scientific software developer, currently working as a senior research assistant in the Maritime Engineering research group at the University of Southampton.
 
-### Key features
 
-- seo optimized
-- weighs under 2kb
-- portfolio/blog pages
-- AAA, 100/100 scores on Lighthouse, Gmetrix and Webpagetest
-- responsive
-- inline css
-- compressed css, html
-- sitemap
-- robots.txt
-- atom feed
+# Background
