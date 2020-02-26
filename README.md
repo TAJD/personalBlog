@@ -1,1 +1,1 @@
-This is my personal website, it is based on the [Ultra](https://github.com/ronv/ultra) theme.
+This is my personal website. It is based on the [Ultra](https://github.com/ronv/ultra) theme.
