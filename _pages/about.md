@@ -5,7 +5,7 @@ title: About
 
 # About
 
-I am a scientific software developer, currently working as a senior research assistant in the Maritime Engineering research group at the University of Southampton.
+I am a scientific software developer, currently working as a senior research assistant in the Maritime Engineering research group at the University of Southampton. Explore this website or read my [CV]({{ site.url }}/assets/thomas_dickson_cv.pdf) to learn about what I do.
 
 # Website
 
