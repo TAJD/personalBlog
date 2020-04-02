@@ -7,7 +7,7 @@ title: About
 
 I am a scientific software developer, currently working as a senior research assistant in the Maritime Engineering research group at the University of Southampton. Explore this website or read my [CV]({{ site.url }}/assets/thomas_dickson_cv.pdf) to learn about what I do.
 
-I am interested in undertaking contract work or full time positions which involve implementing and investigating numerical models for solving problems. 
+I am interested in undertaking contract work or full time positions which involve implementing and investigating numerical models, automating data analysis, or producing dashboards in Pythons. 
 
 # Website
 
