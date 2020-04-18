@@ -1,7 +1,8 @@
 site: TAJD
 url: https://tajd.github.io
 title: TAJD
-description: Thomas Dickson - Software developer and Data scientist
+description: Thomas Dickson 
+future: true
 
 permalink: pretty
 
