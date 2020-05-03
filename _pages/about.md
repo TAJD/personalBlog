@@ -5,7 +5,9 @@ title: About
 
 # About
 
-I am a data scientist, currently working as the English Institute of Sport Senior Research Assistant in the Maritime Engineering research group at the University of Southampton. Read my [CV]({{ site.url }}/assets/thomas_dickson_cv.pdf) to learn about my background.
+I am currently working as the English Institute of Sport Research Fellow in the Maritime Engineering research group at the University of Southampton. Read my [CV]({{ site.url }}/assets/thomas_dickson_cv.pdf) to learn about my background.
+
+My research interests include applying machine learning to marine problems, quantitative modelling of sports and using naval architecture in archaeological problems.
 
 # Website
 
