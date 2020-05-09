@@ -1,8 +1,8 @@
-I"` <p>This post is motivated by my desire to understand how to recover point locations given a Euclidean Distance Matrix. I took some time to understand the explanation in <a href="https://math.mit.edu/~gs/learningfromdata/">Linear Algebra and Learning from Data</a> and <a href="https://arxiv.org/pdf/1502.07541.pdf">this paper</a> so I decided to write up the solution of a problem. The desire to reconstruct point sets from EDMs occurs in areas such as ultrasound tomography and others which involve attempting to reconstruct the location of recording devices given the recorded signals. I have no doubt there are many others.</p>
+I"Ÿ!<p>This post is motivated by my desire to understand how to recover point locations given a Euclidean Distance Matrix. I took some time to understand the explanation in <a href="https://math.mit.edu/~gs/learningfromdata/">Linear Algebra and Learning from Data</a> and <a href="https://arxiv.org/pdf/1502.07541.pdf">this paper</a> so I decided to write up the solution of a problem. The desire to reconstruct point sets from EDMs occurs in areas such as ultrasound tomography and others which involve attempting to reconstruct the location of recording devices given the recorded signals. I have no doubt there are many others.</p>
 
 <p>The general question can be phrased as: <strong>How to reconstruct the locations of the original vectors given the Euclidean distance matrix, $D$?</strong></p>
 
-<p>The key assumption is that the distances in $D$ satisfy the triangle inequality, which means that there will always be a position matrix $X$. $X$ has $d$ rows when the points are in $d$-dimensional space.</p>
+<p>The key assumption is that the distances in $D$ satisfy the triangle inequality, which means that there will always be a position matrix $X$. $X$ has $d$ rows when the points are in $d$-dimensional space. Once the point set has been identified it is possible to align the point set with known locations using Procrustes analysis - also known as the Orthogonal Procrustes problem.</p>
 
 <h1 id="theory">Theory</h1>
 
@@ -51,7 +51,15 @@
 
 <p>This problem is Q5 from Problem Set $VII.1$ from the <a href="https://math.mit.edu/~gs/learningfromdata/">Linear Algebra and Learning from Data</a> textbook. Given a Euclidean distance matrix, $D$, find the locations of the points:</p>
 
-<p>$D = \begin{bmatrix}0 &amp; 9 &amp; 25\9 &amp; 0 &amp; 16\25 &amp; 16&amp; 0\end{bmatrix}$</p>
+<p>$D = \begin{bmatrix}0 &amp; 9 &amp; 25 \9 &amp; 0 &amp; 16 \25 &amp; 16 &amp; 0\end{bmatrix}$</p>
+
+<p>$
+    \begin{matrix}
+    1 &amp; x &amp; x^2 <br />
+    1 &amp; y &amp; y^2 <br />
+    1 &amp; z &amp; z^2 <br />
+    \end{matrix}
+$</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">D</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">25</span><span class="p">],</span> <span class="p">[</span><span class="mi">9</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">16</span><span class="p">],</span> <span class="p">[</span><span class="mi">25</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">0</span><span class="p">]])</span>
 </code></pre></div></div>

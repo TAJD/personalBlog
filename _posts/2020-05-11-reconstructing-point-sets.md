@@ -65,8 +65,7 @@ from scipy.spatial.distance import cdist
 
 This problem is Q5 from Problem Set $VII.1$ from the [Linear Algebra and Learning from Data](https://math.mit.edu/~gs/learningfromdata/) textbook. Given a Euclidean distance matrix, $D$, find the locations of the points:
 
-$D = \begin{bmatrix}0 & 9 & 25\\9 & 0 & 16\\25 & 16& 0\end{bmatrix}$
-
+$D = \begin{bmatrix}0 & 9 & 25 \\\9 & 0 & 16 \\\25 & 16 & 0\end{bmatrix}$
 
 ```python
 D = np.array([[0, 9, 25], [9, 0, 16], [25, 16, 0]])

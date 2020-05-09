@@ -1,12 +1,12 @@
-I"€ <p>This post is motivated by my desire to understand how to recover point locations given a Euclidean Distance Matrix. I took some time to understand the explanation in <a href="https://math.mit.edu/~gs/learningfromdata/">Linear Algebra and Learning from Data</a> and <a href="https://arxiv.org/pdf/1502.07541.pdf">this paper</a> so I decided to write up the solution of a problem. The desire to reconstruct point sets from EDMs occurs in areas such as ultrasound tomography and others which involve attempting to reconstruct the location of recording devices given the recorded signals. I have no doubt there are many others.</p>
+I"Í!<p>This post is motivated by my desire to understand how to recover point locations given a Euclidean Distance Matrix. I took some time to understand the explanation in <a href="https://math.mit.edu/~gs/learningfromdata/">Linear Algebra and Learning from Data</a> and <a href="https://arxiv.org/pdf/1502.07541.pdf">this paper</a> so I decided to write up the solution of a problem. The desire to reconstruct point sets from EDMs occurs in areas such as ultrasound tomography and others which involve attempting to reconstruct the location of recording devices given the recorded signals. I have no doubt there are many others.</p>
 
 <p>The general question can be phrased as: <strong>How to reconstruct the locations of the original vectors given the Euclidean distance matrix, $D$?</strong></p>
 
-<p>The key assumption is that the distances in $D$ satisfy the triangle inequality, which means that there will always be a position matrix $X$. $X$ has $d$ rows when the points are in $d$-dimensional space.</p>
+<p>The key assumption is that the distances in $D$ satisfy the triangle inequality, which means that there will always be a position matrix $X$. $X$ has $d$ rows when the points are in $d$-dimensional space. Once the point set has been identified it is possible to align the point set with known locations using Procrustes analysis - also known as the Orthogonal Procrustes problem.</p>
 
 <h1 id="theory">Theory</h1>
 
-<p>This procedure is summarised from <a href="https://arxiv.org/pdf/1502.07541.pdf">this paper</a>. This method is known as <em>classical MDS</em> and is the fundamental method which can be developed to consider real world problems, for example, those with noise.</p>
+<p>This procedure is summarised from <a href="https://arxiv.org/pdf/1502.07541.pdf">this paper</a>. This method is known as <em>classical MDS</em> and can be developed to consider real world problems, for example, those with noise.</p>
 
 <p>Consider a collection of $n$ points in a $d$-dimensional Euclidean space. The squared distance between points $x_i$ and $x_j$ is $d_{ij}$ and is calculated using:</p>
 
@@ -51,7 +51,15 @@
 
 <p>This problem is Q5 from Problem Set $VII.1$ from the <a href="https://math.mit.edu/~gs/learningfromdata/">Linear Algebra and Learning from Data</a> textbook. Given a Euclidean distance matrix, $D$, find the locations of the points:</p>
 
-<p>$D = \begin{bmatrix}0 &amp; 9 &amp; 25\9 &amp; 0 &amp; 16\25 &amp; 16&amp; 0\end{bmatrix}$</p>
+<script type="math/tex; mode=display">% <![CDATA[
+D = \begin{bmatrix}0 & 9 & 25 \\9 & 0 & 16 \\25 & 16 & 0\end{bmatrix} %]]></script>
+
+<script type="math/tex; mode=display">% <![CDATA[
+\begin{matrix}
+    1 & x & x^2 \\
+    1 & y & y^2 \\
+    1 & z & z^2 \\
+    \end{matrix} %]]></script>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">D</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">25</span><span class="p">],</span> <span class="p">[</span><span class="mi">9</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">16</span><span class="p">],</span> <span class="p">[</span><span class="mi">25</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">0</span><span class="p">]])</span>
 </code></pre></div></div>

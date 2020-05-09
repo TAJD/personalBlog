@@ -1,0 +1,106 @@
+I"�!<p>This post is motivated by my desire to understand how to recover point locations given a Euclidean Distance Matrix. I took some time to understand the explanation in <a href="https://math.mit.edu/~gs/learningfromdata/">Linear Algebra and Learning from Data</a> and <a href="https://arxiv.org/pdf/1502.07541.pdf">this paper</a> so I decided to write up the solution of a problem. The desire to reconstruct point sets from EDMs occurs in areas such as ultrasound tomography and others which involve attempting to reconstruct the location of recording devices given the recorded signals. I have no doubt there are many others.</p>
+
+<p>The general question can be phrased as: <strong>How to reconstruct the locations of the original vectors given the Euclidean distance matrix, $D$?</strong></p>
+
+<p>The key assumption is that the distances in $D$ satisfy the triangle inequality, which means that there will always be a position matrix $X$. $X$ has $d$ rows when the points are in $d$-dimensional space. Once the point set has been identified it is possible to align the point set with known locations using Procrustes analysis - also known as the Orthogonal Procrustes problem.</p>
+
+<h1 id="theory">Theory</h1>
+
+<p>This procedure is summarised from <a href="https://arxiv.org/pdf/1502.07541.pdf">this paper</a>. This method is known as <em>classical MDS</em> and can be developed to consider real world problems, for example, those with noise.</p>
+
+<p>Consider a collection of $n$ points in a $d$-dimensional Euclidean space. The squared distance between points $x_i$ and $x_j$ is $d_{ij}$ and is calculated using:</p>
+
+<script type="math/tex; mode=display">d_{ij}= \lvert\lvert x_i - x_j \rvert\rvert^2</script>
+
+<p>Expanding this norm yields:</p>
+
+<script type="math/tex; mode=display">d_{ij}=(x_i - x_j)^T(x_i - x_j) = x_i^T x_i - 2x_i^T x_j + x_j^T x_j</script>
+
+<p>The matrix equation for the distance matrix $D=[d_ij]$ is calculated using:</p>
+
+<script type="math/tex; mode=display">edm(X)=\mathit{1} \text{diag}(X^TX)^T - 2X^TX + \text{diag}(X^T X)\mathit{1}^T</script>
+
+<p>$\mathit{1}$ is the column vector of all ones and $diag(A)$ is a column vector of the diagonal entries of $A$.</p>
+
+<p>The operator $\kappa (G)$ is defined which is equivalent to $edm(X)$ that operates directly on the Gram matrix $G=X^T X$. This now gives the equation below:</p>
+
+<script type="math/tex; mode=display">\kappa (G) = diag(G)\mathit{1}^T - 2G + \mathit{1} diag(G)^T</script>
+
+<p>Let the first point $x_1$ be the origin, then the first column of $D$ contains the squared norms of the point vectors,</p>
+
+<script type="math/tex; mode=display">d_{i1} = \lvert\lvert x_i - x_1 \rvert\rvert^2= \lvert\lvert x_i - 0 \rvert\rvert^2 == \lvert\lvert x_i \rvert\rvert^2</script>
+
+<p>It is now possible to construct the term $diag(G)\mathit{1}^T$ and its transpose in the equation to calculate $\kappa (G)$.</p>
+
+<p>The Gram matrix $G$ can now be found from $\kappa (G)$ like so:</p>
+
+<script type="math/tex; mode=display">X^T X=G=-\frac{1}{2}\big(D-\mathit{1}d_1^T-d_1\mathit{1}\big)</script>
+
+<p>The final stage is to identify the point set using Eigenvalue Decomposition (EVD), for example:</p>
+
+<script type="math/tex; mode=display">G =U\Lambda U^T</script>
+
+<p>Remember that $\Lambda = diag(\lambda_1, …,\lambda_n)$</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="n">np</span><span class="p">;</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+<span class="kn">from</span> <span class="nn">scipy.spatial</span> <span class="kn">import</span> <span class="n">distance_matrix</span>
+<span class="kn">from</span> <span class="nn">scipy.spatial.distance</span> <span class="kn">import</span> <span class="n">cdist</span>
+</code></pre></div></div>
+
+<h2 id="example-problem">Example problem</h2>
+
+<p>This problem is Q5 from Problem Set $VII.1$ from the <a href="https://math.mit.edu/~gs/learningfromdata/">Linear Algebra and Learning from Data</a> textbook. Given a Euclidean distance matrix, $D$, find the locations of the points:</p>
+
+<p>$D = \begin{bmatrix}0 &amp; 9 &amp; 25 \9 &amp; 0 &amp; 16 \25 &amp; 16 &amp; 0\end{bmatrix}$</p>
+
+<script type="math/tex; mode=display">% <![CDATA[
+\begin{matrix}
+    1 & x & x^2 \\
+    1 & y & y^2 \\
+    1 & z & z^2 \\
+    \end{matrix} %]]></script>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">D</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">25</span><span class="p">],</span> <span class="p">[</span><span class="mi">9</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">16</span><span class="p">],</span> <span class="p">[</span><span class="mi">25</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">0</span><span class="p">]])</span>
+</code></pre></div></div>
+
+<p>Calculate the Gram matrix (I hope that it is positive semidefinite but it is possible to check this: J. C. Gower, “Euclidean Distance Geometry,” Math. Sci., vol. 7, pp. 1–14, 1982.)</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">G</span> <span class="o">=</span> <span class="o">-</span><span class="mf">0.5</span><span class="o">*</span><span class="p">(</span><span class="n">D</span><span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">outer</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span> <span class="n">D</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="p">:])</span><span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">outer</span><span class="p">(</span><span class="n">D</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="mi">3</span><span class="p">)))</span>
+<span class="n">G</span>
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>array([[ 9., -0., -0.],
+       [-0., -0., -0.],
+       [-0., -0., 16.]])
+</code></pre></div></div>
+
+<script type="math/tex; mode=display">G=U\Lambda U^T</script>
+
+<p>Use <code class="highlighter-rouge">np.linalg.svd</code> to find out what happens next!</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Q</span><span class="p">,</span> <span class="n">Lambda</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">svd</span><span class="p">(</span><span class="n">G</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">Q</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">Lambda</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[[0. 1. 0.]
+ [0. 0. 1.]
+ [1. 0. 0.]]
+[16.  9. -0.]
+</code></pre></div></div>
+
+<p>Return the original point set: $\hat{X}=\Lambda^{1/2}U^T$</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">np</span><span class="o">.</span><span class="n">power</span><span class="p">(</span><span class="n">Lambda</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">)</span> <span class="o">*</span> <span class="n">Q</span><span class="o">.</span><span class="n">T</span>
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>array([[0., 0., 0.],
+       [4., 0., 0.],
+       [0., 3., 0.]])
+</code></pre></div></div>
+
+<p>This makes sense.</p>
+
+<p>There was no need to code this example up - I was just interested in how I would do it in case I needed to do so in anger!</p>
+
+:ET
