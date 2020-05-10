@@ -1,0 +1,18 @@
+I"£<p>This crib sheet roughly corresponds to part 2 of <a href="https://math.mit.edu/~gs/learningfromdata/">LALFD</a>.</p>
+
+<h1 id="four-ways-of-solving-least-squares">Four ways of solving Least Squares:</h1>
+
+<p>Many applications lead to unsolvable linear equations $Ax=b$. The best solution to these equations is $\hat{x}$.</p>
+
+<p>Least squares chooses $\hat{x}$ to minimise the error $\lvert \lvert b - A \hat{x} \rvert \rvert^2$</p>
+
+<p>Minimising the error means that the derivatives are zero, this leads to the normal equations: $A^T A \hat{x} = A^T b$</p>
+
+<h1 id="some-useful-links-for-least-squares">Some useful links for Least squares</h1>
+
+<ul>
+  <li><a href="http://mlwiki.org/index.php/Normal_Equation#Linear_Algebra_Point_of_View">Normal equations</a></li>
+  <li>https://en.wikibooks.org/wiki/Linear_Algebra/Orthogonal_Projection_Onto_a_Line</li>
+  <li>https://textbooks.math.gatech.edu/ila/projections.html</li>
+</ul>
+:ET

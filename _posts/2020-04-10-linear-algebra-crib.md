@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Linear algebra crib notes
+title: Linear algebra crib
 description: Linear algebra for data science
 published: true
 future: true
@@ -23,7 +23,7 @@ $$ A = U \Sigma V^T $$
 
 With decreasing $ \sigma $'s those rank-one pieces of $A$ still come in order of importance. The "Eckart-Young Theorem" about $A$ complements what we know about the symmetric matrix $A^T A$: for rank $k$, stop at $ \sigma_k u_k v_k^T$.
 
-# Topics covered:
+# Topics covered in P1 of LADA
 
 1. Multiplication $Ax$ using columns of $A$
 1. Matrix-Matrix multiplication $ \boldsymbol{AB}$
