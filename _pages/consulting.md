@@ -10,4 +10,4 @@ I enjoy developing solutions in the following areas:
 - Data science.
 - Designing software and hardware solutions for engineering problems.
 
-Please contact me at ``tajdickson@protonmail.com`` if you have a problem you think I can help with.
+Please contact me at ``tajdickson@protonmail.com`` if you want to find out how I can solve your problem.
