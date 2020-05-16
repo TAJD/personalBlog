@@ -7,7 +7,6 @@ category: PhD
 ---
 
 As part of my research I collaborated on various research outputs:
-
-- I presented a conference paper on [Reliability informed weather routing for autonomous sailing craft]({{ site.url }}/assets/papers/reliability_routing.pdf).
-- I delivered a [presentation](https://www.youtube.com/watch?v=H9734QKifKg) on the use of [Julia](https://julialang.org/) in my research. You can find the code that I developed [here](https://github.com/TAJD/SailRoute.jl).
-- I co-authored a [paper](https://www.sciencedirect.com/science/article/pii/S0141118719300380) applying numerical methods to marine weather routing. An arxiv version can be found [here](https://arxiv.org/abs/1901.03840).
+- I have improved the safety of marine vessels by developing a method for considering the reliability of a vessel as it completes a voyage. I presented a conference paper on [Reliability informed weather routing for autonomous sailing craft]({{ site.url }}/assets/papers/reliability_routing.pdf).
+- I developed a quantitative model to run on a distributed cloud computing system to produce accurate analysis in a fast manner. I delivered a [presentation](https://www.youtube.com/watch?v=H9734QKifKg) on the development of this model and the use of [Julia](https://julialang.org/) in my research. You can find the code that I developed [here](https://github.com/TAJD/SailRoute.jl).
+- I implemented a novel method for modelling the influence of different sources of uncertainty in the accuracy of marine weather routing methods. I summarised this research in a [paper](https://www.sciencedirect.com/science/article/pii/S0141118719300380).
