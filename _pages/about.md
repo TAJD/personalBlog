@@ -5,7 +5,9 @@ title: About
 
 # About
 
-I produce data driven solutions to complex problems. I am currently working as the English Institute of Sport Research Fellow in the Maritime Engineering research group at the University of Southampton.  Find my resume [here]({{ site.url }}/assets/resume.pdf).
+I produce data driven solutions to complex problems. I am currently working as the English Institute of Sport Research Fellow in the Maritime Engineering research group at the University of Southampton.  
+
+Find my resume [here]({{ site.url }}/assets/resume.pdf).
 
 # Website
 
