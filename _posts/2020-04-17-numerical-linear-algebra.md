@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Numerical linear algebra crib
-description: Numerical linear algebra crib
+description: A review of numerical linear algebra for machine learning.
 published: true
 future: true
 mathjax: true

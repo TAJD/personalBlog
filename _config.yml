@@ -25,6 +25,9 @@ plugins:
   - jekyll-sitemap  
 
 collections:
+  technical_notes:
+    output: true
+    permalink: technical_notes/:slug
   pages:
     output: true
     permalink: /:name

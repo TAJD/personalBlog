@@ -2,7 +2,7 @@
 layout: project
 title: Uncertainty in Marine Weather Routing, An Investigation into Polynesian Seafaring
 description: modelling uncertainty in marine weather routing
-summary: I developed a new methodology to model the influence of uncertainty from varied sources in the marine weather routing process. I applied this methodology to model the influence of climate and vessel performance on the challenge of settling Polynesia.
+summary: Developing a new methodology to model the influence of uncertainty from varied sources in the marine weather routing process. This methodology identified that the ability to sail upwind was a determining factor in the ability to settle Polynesia.
 category: PhD
 ---
 

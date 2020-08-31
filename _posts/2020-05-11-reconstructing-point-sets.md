@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Reconstruct point set from Euclidean Distance Matrix
-description: Solving a simple problem using code because I doubted myself.
+description: Recovering point locations from vectors.
 published: true
 future: true
 mathjax: true

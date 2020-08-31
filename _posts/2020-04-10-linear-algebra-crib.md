@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Linear algebra crib
-description: Linear algebra for data science
+description: Quick overview on different topics within Linear Algebra which aid understanding of data science methods.
 published: true
 future: true
 mathjax: true

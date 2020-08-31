@@ -2,7 +2,7 @@
 layout: project
 title: MEng Ship Science
 description: 
-summary: I completed a degree in Ship Science/Yacht and Small Craft at the University of Southampton with a year in industry.
+summary: A mechanical engineering degree with a focus on designing ships and offshore structures.
 category: Education
 ---
 

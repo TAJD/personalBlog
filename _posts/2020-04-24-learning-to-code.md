@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Coding and coding interviews
-description: Learning to code to pass interview questions
+description: Some resources for learning to pass coding interviews.
 published: true
 future: true
 mathjax: true
