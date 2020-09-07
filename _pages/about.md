@@ -5,7 +5,11 @@ title: About
 
 # About
 
-I am a full stack data scientist currently working at [Dynamon](https://dynamon.co.uk/). I work on problems across the stack: from storing and processing data through to analysis and presenting insights on the frontend. I previously worked as the English Institute of Sport Research Fellow at the University of Southampton where I supported Team GB with scientific research.
+I am a full stack data scientist currently working at [Dynamon](https://dynamon.co.uk/). I work on problems across the stack: from storing and processing data through to analysis and presenting insights on the frontend.
+
+I also occasionally contribute to open source software such as Pandas.
+
+I previously worked as the English Institute of Sport Research Fellow at the University of Southampton where I supported Team GB with scientific research.
 
 Find my resume [here]({{ site.url }}/assets/resume.pdf).
 
