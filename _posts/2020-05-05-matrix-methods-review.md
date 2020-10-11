@@ -5,6 +5,7 @@ description: A review of the MIT 18.065 Matrix Methods in Data Analysis, Signal 
 published: true
 future: true
 mathjax: true
+categories: [Maths, Books, Data Science]
 ---
 
 Given the COVID outbreak and associated work from home period I thought now might be a good opportunity to ~~re~~learn some of the mathematics which underpin statistical learning. I identified the [MIT 18.065](https://ocw.mit.edu/courses/mathematics/18-065-matrix-methods-in-data-analysis-signal-processing-and-machine-learning-spring-2018/) course as having potential for a course which covers the fundamentals in detail. I found that the course does a good job of ensuring you learn about Neural Networks from the fundamentals up. The textbook has plenty of references and questions on the key topics, but loses its focus in deeper areas of probability and alternative statistical methods. This post records my experience of following the lecture series and completing the example problems over the previous thirty or so days.

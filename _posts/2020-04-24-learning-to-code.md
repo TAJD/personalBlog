@@ -5,6 +5,7 @@ description: Some resources for learning to pass coding interviews.
 published: true
 future: true
 mathjax: true
+categories: [Programming, Books]
 ---
 
 

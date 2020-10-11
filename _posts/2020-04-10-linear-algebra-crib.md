@@ -5,6 +5,7 @@ description: Quick overview on different topics within Linear Algebra which aid 
 published: true
 future: true
 mathjax: true
+categories: [Maths, Data Science]
 ---
 
 These are my crib notes for the key linear algebra topics for the [MIT Opencourseware course Matrix Methods in Data Analysis, Signal Processing, and Machine Learning.](https://ocw.mit.edu/courses/mathematics/18-065-matrix-methods-in-data-analysis-signal-processing-and-machine-learning-spring-2018/) The accompanying text for this course is [Linear algebra and learning from Data](https://math.mit.edu/~gs/learningfromdata/) which I think is a rather good breeze through all the things one needs to know to do data science. I take no responsibility for the ideas on this page, they are all the fault of the sources that I've linked to.

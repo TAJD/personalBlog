@@ -1,10 +1,11 @@
 ---
 layout: post
-title: Reconstruct point set from Euclidean Distance Matrix
+title: Reconstruct a point set from a Euclidean Distance Matrix
 description: Recovering point locations from vectors.
 published: true
 future: true
 mathjax: true
+categories: [Maths]
 ---
 
 

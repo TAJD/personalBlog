@@ -6,8 +6,10 @@ layout: default
 
 <article role="article">
   <h1>{{ page.title }}</h1>
-  <time class="date" datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time>
+  <time class="date" datetime="{{ page.date | date_to_xmlschema }}">Shared on the {{ page.date | date: "%B %-d, %Y" }}</time>
+  <br>
+  <time class="date" datetime="{{ page.last_modified_at | date_to_xmlschema }}">Last modified on the {{ page.last_modified_at | date: "%B %-d, %Y" }} </time>
   {{ content }}
-</article>
+</article
 
 

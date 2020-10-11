@@ -22,7 +22,8 @@ plugins:
   - jekyll-paginate
   - jekyll-gist
   - jekyll-seo-tag
-  - jekyll-sitemap  
+  - jekyll-sitemap
+  - jekyll-last-modified-at
 
 collections:
   technical_notes:
@@ -34,9 +35,6 @@ collections:
   posts:
     output: true
     permalink: /:year/:month/:day/:slug
-  projects:
-    output: true
-    permalink: /projects/:slug
   
 defaults:
   -
@@ -57,13 +55,12 @@ defaults:
     values:
       layout: "post"
   -
-    scope:
-      path: ""
-      type: "projects"
-    values:
-      layout: "project"
       
   - scope:
       path: "assets/images"
     values:
       image: true
+
+# Optional. The default date format, used if none is specified in the tag.
+last-modified-at:
+  date-format: '%d %b %y'

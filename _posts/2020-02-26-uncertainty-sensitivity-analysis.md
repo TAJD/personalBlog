@@ -2,6 +2,7 @@
 layout: post
 title: Uncertainty and sensitivity analysis
 description: Performing uncertainty and sensitivity analyses of scientific models is an essential aspect of the development process. This post introduces a short monograph on different sensitivity and uncertainty quantification methodologies which can be used to investigate quantitative models.
+categories: [Maths]
 ---
 
 I performed a literature review of uncertainty and sensitivity analysis methods at an early stage of my PhD. The lit review never made it into the final thesis due to the nature of research, but I'd like to share it so I can pretend that the effort wasn't wasted!

@@ -5,6 +5,7 @@ description: A review of numerical linear algebra for machine learning.
 published: true
 future: true
 mathjax: true
+categories: [Maths, Data Science]
 ---
 
 This crib sheet is based on material from Part 2 of [LALFD](https://math.mit.edu/~gs/learningfromdata/). 
