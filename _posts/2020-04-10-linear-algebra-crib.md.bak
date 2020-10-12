@@ -14,7 +14,7 @@ These are my crib notes for the key linear algebra topics for the [MIT Opencours
 
 Linear algebra has many different matrices, but positive definite symmetric matrices $ S $ are the best ones as they have positive eigenvalues $ \lambda $ and orthogonal eigenvectors $ q $. $ S $ matrices are combinations $ S = \lambda_1 q_1 q_1^T + \lambda_2 q_2 q_2^T ... $ of simple rank-one projections $qq^T$ onto those eigenvectors.
 
-If $\lambda_1 \geq \lambda_2 \geq \lambda_2 ... $ then $ \lambda_1 q_1 q_1^T$ is the most informative part of $S$. For a sample co-variance matrix this part has the greatest variation.
+If $\lambda_1 \geq \lambda_2 \geq \lambda_2 ... $ then $ \lambda_1 q_1 q_1^T$ is the most informative part of $S$. For a sample covariance matrix this part has the greatest variation.
 
 These ideas are extended from symmetric matrices to all matrices using the singular value decomposition (SVD). The matrix $A$ is decomposed into two sets of singular vectors $u$s and $v$s and singular values $\sigma$ replace eigenvalues $\lambda$.
 

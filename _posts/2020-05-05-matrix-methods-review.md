@@ -1,7 +1,8 @@
 ---
 layout: post
 title: Matrix Methods in Data Analysis review
-description: A review of the MIT 18.065 Matrix Methods in Data Analysis, Signal Processing, and Machine Learning, Spring 2018 opencourseware course, instructed by Gilbert Strang.
+date: 2020-05-05 09:00
+description: A review of the MIT 18.065 Spring 2018 opencourseware course, instructed by Gilbert Strang.
 published: true
 future: true
 mathjax: true

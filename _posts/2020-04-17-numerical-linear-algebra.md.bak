@@ -21,7 +21,7 @@ Minimising the error means that the derivatives are zero, this leads to the norm
 
 There are four ways to calculate $\hat{x}$ as an approximate solution:
 
-1. The singular value decomposition of $A$ leads to its pseudo inverse $A^+$. Then $\hat{x}=A^+b$
+1. The singular value decomposition of $A$ leads to its pseudoinverse $A^+$. Then $\hat{x}=A^+b$
 1. $A^TA\hat{x} = A^Tb$ can be solved directly when $A$ has independent columns.
 1. The Gram-Schmidt idea produces orthogonal columns in $Q$. Then $A=QR$.
 1. Minimise $\lvert \lvert b - A \hat{x} \rvert \rvert^2 + \delta^2 \lvert \lvert x \rvert \rvert^2$. The penalty alters the normal equations to $(A_TA + \delta^2 I)x_{\delta} = A^T b$.
