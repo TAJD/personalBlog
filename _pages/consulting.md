@@ -3,4 +3,4 @@ layout: page
 title: Consulting
 ---
 
-I run [Hephaestus Data Solutions](https://www.hephaestusdata.co.uk/) providing data science analysis and data driven application development services.
+I run [Hephaestus Data Solutions](https://www.hephaestusdata.co.uk/) developing data driven apps and providing data science consultancy services.
