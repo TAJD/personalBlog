@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Matrix Methods in Data Analysis review
+title: Matrix Methods in Data Analysis Review
 date: 2020-05-05 09:00
 description: A review of the MIT 18.065 Spring 2018 opencourseware course, instructed by Gilbert Strang.
 published: true
@@ -11,7 +11,7 @@ categories: [Maths, Books, Data Science]
 
 Given the COVID outbreak and associated work from home period I thought now might be a good opportunity to ~~re~~learn some of the mathematics which underpin statistical learning. I identified the [MIT 18.065](https://ocw.mit.edu/courses/mathematics/18-065-matrix-methods-in-data-analysis-signal-processing-and-machine-learning-spring-2018/) course as having potential for a course which covers the fundamentals in detail. I found that the course does a good job of ensuring you learn about Neural Networks from the fundamentals up. The textbook has plenty of references and questions on the key topics, but loses its focus in deeper areas of probability and alternative statistical methods. This post records my experience of following the lecture series and completing the example problems over the previous thirty or so days.
 
-I spent between $1.5$ to $2$ hours watching the lecture and solving  every day. Early on in the course I found that the lectures were good but didn't quite dumb it down enough for me - so I purchased the textbook [Linear Algebra and Learning from Data](https://math.mit.edu/~gs/learningfromdata/). Each lecture has example problems which map to different sections of the textbook. Some of these questions differ between the course and the physical copy, but examine the same concepts that you expect. I was able to answer the questions with a bit of work reviewing the textbook and reading the notes, I found the internet to be very useful for the harder problems.
+I spent between $1.5$ to $2$ hours watching the lecture and solving questions every day. Early on in the course I found that the lectures were good but didn't quite dumb it down enough for me - so I purchased the textbook [Linear Algebra and Learning from Data](https://math.mit.edu/~gs/learningfromdata/). Each lecture has example problems which map to different sections of the textbook. Some of these questions differ between the course and the physical copy, but examine the same concepts that you expect. I was able to answer the questions with a bit of work reviewing the textbook and reading the notes, I found the internet to be very useful for the harder problems.
 
 The course material is grouped into $4$ areas: 1. Linear algebra, 2. Probability, 3. Optimisation, and 4. Deep Learning. It is clear that Gil knows how to teach Linear Algebra. My first exposure to this chap came from watching a keynote at a Julia conference so it was a real pleasure to see his expository skill first hand. He confidently held my hand through the basics of linear algebra, numerical linear algebra (actually solving the real problems) and then into the beginnings of exploring the necessary knowledge of probability. We didn't spend too long in this part of the map, and I thought that the textbook could have done a better job of including more questions on statistics. The lack of a large section on statistics (and example questions) is a minor point, because this course/textbook is about how to understand neural networks through the use of linear algebra. 
 
