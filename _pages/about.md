@@ -13,6 +13,6 @@ Find my resume [here]({{ site.url }}/assets/resume.pdf).
 
 # Website
 
-I'm using this website to record some of the things I learn in the hope that someone else might find them useful. Another reason is that the act of writing things down helps me clarify my own thoughts. The mistakes on this website are entirely my own.
+I'm using this website to record some of the things I learn in the hope that someone else might find them useful. A more selfish reason is that I enjoy writing about ideas because this helps me learn more about the topics I'm interested in. 
 
-Do send me an email if you find an error - I'm keen to rectify any mistakes or improve poor communication.
+The mistakes on this website are entirely my own. Send me an email at tajdickson@protonmail.com if you find an error - I'm keen to rectify any mistakes or improve poor communication.
