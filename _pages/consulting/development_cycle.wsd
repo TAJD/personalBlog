@@ -1,0 +1,12 @@
+@startuml 
+
+' boilerplate diagram specification
+skinparam handwritten true
+skinparam shadowing false
+skinparam monochrome true
+
+
+
+
+
+@enduml
