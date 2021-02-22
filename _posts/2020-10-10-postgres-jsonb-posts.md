@@ -5,7 +5,7 @@ description: A review of different sources on when JSONB is suitable for use.
 published: true
 future: true
 mathjax: true
-categories: [Postgres]
+categories: [Postgres, SQL]
 ---
 
 Caveat: this note is heavily context dependent. The solution of a given problem is informed by the particular version of a database, the difficulty of implementing a solution and ease of maintaining the solution when in production. Don't be afraid to come up with multiple plans and iterating over the design cycle a few times.
