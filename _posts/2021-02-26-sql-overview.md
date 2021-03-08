@@ -8,7 +8,7 @@ mathjax: true
 categories: [Postgres, SQL]
 ---
 
-The purpose of this note is to describe some key SQL commands and when they might be useful to use. The note concludes with key resources and guides I've found helpful. The perspective is more towards commands which might be useful for running analytical queries rather than traditional database use cases. Joins, for example, have been covered to death elsewhere.
+The purpose of this note is to describe some key SQL commands and when they might be useful to use. The note concludes with key resources and guides I've found helpful. The perspective is more towards commands which might be useful for running analytical queries rather than traditional relational database use cases. Joins, for example, have been covered to death elsewhere.
 
 ## EXPLAIN and ANALYZE
 
@@ -64,7 +64,7 @@ My current preferred solution is to export the data at this stage to Pandas for 
 
 ## dbt and macros
 
-[dbt](https://github.com/fishtown-analytics/dbt) is a useful tool for running complex SQL analytics. It's advantages lie in it's version control, documentation (the lineage map is a killer feature). I enjoy using it immensely.
+[dbt](https://github.com/fishtown-analytics/dbt) is a useful tool for running complex SQL analytics. It applies software engineering principles to data analysis using SQL. Key advantages lie in it's version control, documentation (the lineage map is a killer feature). It has solved a lot of problems for me.
 
 I have been bitten however with using it to produce tables that are queried directly by a production web app. When a dbt model is being rebuilt the table is dropped and queries using it hang. This is obviously not good and I was not the flavour of the month. Lesson learnt there.
 
@@ -73,6 +73,22 @@ Hopefully this edge case will be fixed in the future, but for now I created a ha
 The macro looks something like, where the argument is the name of the dbt model that you don't want dropped.
 
 <script src="https://gist.github.com/TAJD/38cf35819f98831af98de60b9927befe.js"></script>
+
+A macro for importing CTEs directly into models can be seen [here](https://gitlab.com/gitlab-data/analytics/-/merge_requests/4322/diffs?commit_id=e951aec2ae04d888e28f9951e6296a09f998962b#3677f7ec9a0cda5e3249444ea6f0fb5cbba1ff34).
+
+## `GENERATE_SERIES`
+
+`GENERATE_SERIES` can be used to generate a range of equally spaced values. It can be used to:
+
+1. Generate sample data.
+2. Accurate reporting on time series data.
+
+My experience has primarily been with performing analysis with time series data. `GENERATE_SERIES` can be used to return zeros for dates where no data has been found. In other words, `GENERATE_SERIES` can be used to generate a timestamp/date range which can be `LEFT OUTER JOINED` on a given dataset to return zero values for dates with no data.
+
+Here are some useful articles:
+
+1. [Fake data and better weekly reporting](https://www.citusdata.com/blog/2018/03/14/fun-with-sql-generate-sql/).
+2. [Use generate series to get continous results](https://www.sisense.com/en-gb/blog/use-generate-series-to-get-continuous-results/).
 
 ## Useful resources
 
