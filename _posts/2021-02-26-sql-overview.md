@@ -10,6 +10,8 @@ categories: [Postgres, SQL]
 
 The purpose of this note is to describe some key SQL commands and when they might be useful to use. The note concludes with key resources and guides I've found helpful. The perspective is more towards commands which might be useful for running analytical queries rather than traditional relational database use cases. Joins, for example, have been covered to death elsewhere.
 
+For a wide ranging and in-depth review for using SQL in data analysis see [this article here](https://hakibenita.com/sql-for-data-analysis). I'm using this page to consolidate my notes and some useful links.
+
 ## EXPLAIN and ANALYZE
 
 `EXPLAIN` and `ANALYZE` are used to quantify how a given query might perform. `EXPLAIN` is used to describe the plan that Postgres is going to use to execute a query with an estimated cost of execution and `ANALYZE` executes the query and returns the actual cost and time to execute.
@@ -96,3 +98,4 @@ Here are some useful articles:
 1. [This page](https://hakibenita.com/sql-for-data-analysis) has to be the best page I've ever seen for summarising all the main useful SQL commands for data analysis.
 1. The Gitlab SQL guide is the first port of call for writing production quality SQL code - found [here](https://about.gitlab.com/handbook/business-ops/data-team/platform/sql-style-guide/).
 2. The official Postgres documentation is zen like and instructive. Find it [here](https://www.postgresql.org/docs/).
+3. An excellent tutorial on SQL can be found [here](https://mode.com/sql-tutorial/).
