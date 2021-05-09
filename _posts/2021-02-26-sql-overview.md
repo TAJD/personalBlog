@@ -93,5 +93,6 @@ Here are some useful articles:
 ## Useful resources
 
 
+1. [This page](https://hakibenita.com/sql-for-data-analysis) has to be the best page I've ever seen for summarising all the main useful SQL commands for data analysis.
 1. The Gitlab SQL guide is the first port of call for writing production quality SQL code - found [here](https://about.gitlab.com/handbook/business-ops/data-team/platform/sql-style-guide/).
 2. The official Postgres documentation is zen like and instructive. Find it [here](https://www.postgresql.org/docs/).
