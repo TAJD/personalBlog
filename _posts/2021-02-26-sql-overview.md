@@ -26,6 +26,8 @@ I use these commands to check:
 
 [Common table expressions](https://www.postgresql.org/docs/current/queries-with.html) (CTE)s can be thought of as temporary tables which last for the duration of the query. You can also think of them as _import_ statements for data to use within your main query.
 
+CTEs are more performant after PG 12.
+
 The step change in the use of CTEs here is to use them as a location to set variables which are used within CTES in the rest of the query. For example:
 
 ```SQL
@@ -92,7 +94,7 @@ Here are some useful articles:
 1. [Fake data and better weekly reporting](https://www.citusdata.com/blog/2018/03/14/fun-with-sql-generate-sql/).
 2. [Use generate series to get continous results](https://www.sisense.com/en-gb/blog/use-generate-series-to-get-continuous-results/).
 
-## Useful resources
+## Useful resources for learning SQL
 
 
 1. [This page](https://hakibenita.com/sql-for-data-analysis) has to be the best page I've ever seen for summarising all the main useful SQL commands for data analysis.
