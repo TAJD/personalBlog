@@ -26,8 +26,7 @@ I use this book if I need to understand the theory of a technique in more detail
 
 This book is a tour de force through various areas in linear algebra, statistics and optimisation and some of their applications in the realm of Data Science. It's a great undergrad level textbook as each aspect of an area has problems which gently tease out your understanding of an area. [I've reviewed the book and course in another post.]({% link _posts/2020-05-05-matrix-methods-review.md %})
 
-I probably wouldn't review this book again but I thought it was excellent for helping me cover the fundamentals.
-
+I probably wouldn't read this book again but I thought it was excellent for helping me cover the fundamentals.
 
 # [Doing Data Science](https://www.goodreads.com/book/show/17346997-doing-data-science)
 
