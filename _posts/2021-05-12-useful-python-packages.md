@@ -3,7 +3,6 @@ layout: post
 title: "Useful Python packages"
 description: Some useful Python packages and how they fit into my work.
 published: true
-future: true
 mathjax: true
 categories: [Python, Software engineering, Data science]
 ---
@@ -19,7 +18,7 @@ I use Python quite a lot as part of my job as an data engineer/scientist/backend
 ## Data wrangling
 
 - [Pandas](https://pandas.pydata.org/) is the ubiquitous Python data analysis package. Very useful, performant given the ease of implementation and has a welcoming community for first time committers. Good project to learn about managing a large Python codebase.
-- [sqlalchemy](https://www.sqlalchemy.org/) is a package which allows us the power of SQL within Python. I'd use this to actually interact with a database and leave Pandas for the data analysis work.
+- [sqlalchemy](https://www.sqlalchemy.org/) is the primary Python ORM for working with databases. I'd use this to actually interact with a database and leave Pandas for the data analysis work - Pandas doesn't yet have the `upsert` ability which is useful for storing data.
 - [SQL](https://en.wikipedia.org/wiki/SQL). SQL is a language you need to know to interact with most databases - probably not the noSQL databases, however. [Designing data intensive applications](https://dataintensive.net/) is a good book which has a chapter discussing the differences between noSQL and SQL databases.
 
 ## Visualisation
@@ -49,6 +48,6 @@ Here are some packages I've found useful for the purpose of developing backend s
 
 Continuous integration is the attempt to make deploying performant code as smooth as possible. Part of this process involves running tools on code to spot errors that the humans missed. These tools don't write your code for you, but they help to reduce the frequency and magnitude of errors that occur.
 
-- [Pylint](https://www.pylint.org/) helps with identifying style compliance, code refactoring and error detection. It returns a score after scanning your code and sometimes I get absorbed in cleaning code up! I then remember that I get paid for functionality rather than tidyiness.
+- [Pylint](https://www.pylint.org/) helps with identifying style compliance, code refactoring and error detection. It returns a score after scanning your code and sometimes I get absorbed in making it increase! I then remember that I get paid for functionality rather than tidyiness.
 - [MyPy](https://github.com/python/mypy) is used to check static types in Python code. [PEP 484](https://www.python.org/dev/peps/pep-0484/) added type hints to Python. Type hints are useful for thinking about how different functions fit together. MyPy helps to detect bugs when using type hints.
 - [Black](https://github.com/psf/black) is a code formatter. It helps bring uniformity to rogue code bases and essentially helps everyone to read Python code the same way.
